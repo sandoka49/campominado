@@ -37,6 +37,7 @@ class BotaoCampo (private val campo: Campo):JButton(){
         background= COR_BG_EXPLOSAO
         text = "X"
 
+
     }
     private fun aplicarEventoAberto(){
         background= COR_BG_NORMAL

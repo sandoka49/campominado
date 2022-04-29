@@ -15,7 +15,7 @@ import javax.swing.SwingUtilities
         private val painelTabuleiro = PainelTabuleiro(tabuleiro)
 
         init {
-            tabuleiro.onEvento { this::mostraResultado }
+            tabuleiro.onEvento ( this::mostraResultado )
             add(painelTabuleiro)
             setSize(690, 438)
             setLocationRelativeTo(null)
@@ -24,7 +24,7 @@ import javax.swing.SwingUtilities
             isVisible = true
         }
 
-        private fun mostraResultado(evento: TabuleiroEvento){
+        private fun mostraResultado (evento: TabuleiroEvento){
             SwingUtilities.invokeLater{
                 val msg = when(evento){
                     TabuleiroEvento.VITORIA -> "Você Ganhou"
